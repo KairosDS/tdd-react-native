@@ -16,7 +16,7 @@ export default class SimpleCounter extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text id="text-counter">0</Text>
+        <Text id="text-counter" style={styles.counter}>0</Text>
       </View>
     );
   }
@@ -28,6 +28,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
+  },
+  counter: {
+    fontSize: 92,
+    textAlign: 'center',
   },
 });
 
