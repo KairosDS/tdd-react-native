@@ -1,0 +1,30 @@
+{
+  "name": "SimpleCounter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "15.4.2",
+    "react-native": "0.42.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "20.0.3",
+    "babel-preset-react-native": "1.9.2",
+    "chai": "^3.5.0",
+    "enzyme": "^2.8.2",
+    "eslint": "^3.19.0",
+    "eslint-plugin-flowtype": "^2.33.0",
+    "eslint-plugin-react": "^7.0.1",
+    "jest": "20.0.3",
+    "react-addons-test-utils": "15.4.2",
+    "react-dom": "15.4.2",
+    "react-test-renderer": "15.4.2"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
