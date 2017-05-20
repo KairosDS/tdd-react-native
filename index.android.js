@@ -9,14 +9,31 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
+  Button,
   View
 } from 'react-native';
 
 export default class SimpleCounter extends Component {
+  constructor() {
+    super();
+
+    this.state = {counter: 0};
+
+    this.onPressButtonIncrement = this.onPressButtonIncrement.bind(this);
+  }
+
+  onPressButtonIncrement() {
+    this.setState({counter: ++this.state.counter});
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        <Text id="text-counter" style={styles.counter}>0</Text>
+        <Text id="text-counter" style={styles.counter}>{this.state.counter}</Text>
+        <Button id="button-increment"
+                title="Increment"
+                onPress={this.onPressButtonIncrement}
+        />
       </View>
     );
   }
