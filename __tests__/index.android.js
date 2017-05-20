@@ -1,5 +1,10 @@
-import {expect} from 'chai';
+import React from 'react';
+import SimpleCounter from '../index.android.js';
+import { shallow } from 'enzyme';
+import { expect } from 'chai';
 
-it('should pass', () => {
-  expect(true).to.be.true;
+it('should display the counter set as zero', () => {
+  const wrapper = shallow(<SimpleCounter/>);
+
+  expect(wrapper.find('#text-counter').props().children).to.equal('0');
 });
