@@ -13,6 +13,7 @@ it('should display the Increment button', () => {
   const wrapper = shallow(<SimpleCounter/>);
 
   expect(wrapper.find('#button-increment').props().title).to.equal('Increment');
+  expect(wrapper.find('#button-increment').props().color).to.equal('green');
 });
 
 it('should increment the counter when Increment button is pressed', () => {

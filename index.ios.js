@@ -32,6 +32,7 @@ export default class SimpleCounter extends Component {
         <Text id="text-counter" style={styles.counter}>{this.state.counter}</Text>
         <Button id="button-increment"
                 title="Increment"
+                color="green"
                 onPress={this.onPressButtonIncrement}
         />
       </View>
