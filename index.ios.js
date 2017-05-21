@@ -42,6 +42,7 @@ export default class SimpleCounter extends Component {
         />
         <Button id="button-reset"
                 title="Reset"
+                color="red"
                 onPress={this.onPressButonReset}
         />
       </View>

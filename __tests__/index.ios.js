@@ -28,6 +28,7 @@ it('should display the Reset button', () => {
   const wrapper = shallow(<SimpleCounter/>);
 
   expect(wrapper.find('#button-reset').props().title).to.equal('Reset');
+  expect(wrapper.find('#button-reset').props().color).to.equal('red');
 });
 
 it('should reset the counter when Reset button is pressed', () => {
