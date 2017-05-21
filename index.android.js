@@ -13,22 +13,24 @@ import {
   View
 } from 'react-native';
 
+const ZERO_COUNT = 0;
+
 export default class SimpleCounter extends Component {
   constructor() {
     super();
 
-    this.state = {counter: 0};
+    this.state = {counter: ZERO_COUNT};
 
     this.onPressButtonIncrement = this.onPressButtonIncrement.bind(this);
-    this.onPressButonReset = this.onPressButonReset.bind(this);
+    this.onPressButtonReset = this.onPressButtonReset.bind(this);
   }
 
   onPressButtonIncrement() {
     this.setState({counter: ++this.state.counter});
   }
 
-  onPressButonReset() {
-    this.setState({counter: 0});
+  onPressButtonReset() {
+    this.setState({counter: ZERO_COUNT});
   }
 
   render() {
@@ -43,7 +45,7 @@ export default class SimpleCounter extends Component {
         <Button id="button-reset"
                 title="Reset"
                 color="red"
-                onPress={this.onPressButonReset}
+                onPress={this.onPressButtonReset}
         />
       </View>
     );
