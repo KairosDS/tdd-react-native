@@ -23,3 +23,18 @@ it('should increment the counter when Increment button is pressed', () => {
 
   expect(wrapper.find('#text-counter').props().children).to.equal(1);
 });
+
+it('should display the Reset button', () => {
+  const wrapper = shallow(<SimpleCounter/>);
+
+  expect(wrapper.find('#button-reset').props().title).to.equal('Reset');
+});
+
+it('should reset the counter when Reset button is pressed', () => {
+  const wrapper = shallow(<SimpleCounter/>);
+
+  wrapper.find('#button-increment').simulate('press');
+  wrapper.find('#button-reset').simulate('press');
+
+  expect(wrapper.find('#text-counter').props().children).to.equal(0);
+});

@@ -20,10 +20,15 @@ export default class SimpleCounter extends Component {
     this.state = {counter: 0};
 
     this.onPressButtonIncrement = this.onPressButtonIncrement.bind(this);
+    this.onPressButonReset = this.onPressButonReset.bind(this);
   }
 
   onPressButtonIncrement() {
     this.setState({counter: ++this.state.counter});
+  }
+
+  onPressButonReset() {
+    this.setState({counter: 0});
   }
 
   render() {
@@ -34,6 +39,10 @@ export default class SimpleCounter extends Component {
                 title="Increment"
                 color="green"
                 onPress={this.onPressButtonIncrement}
+        />
+        <Button id="button-reset"
+                title="Reset"
+                onPress={this.onPressButonReset}
         />
       </View>
     );
